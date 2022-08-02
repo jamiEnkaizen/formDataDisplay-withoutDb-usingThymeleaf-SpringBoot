@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact</title>
+</head>
+<body>
+
+    <div class="mainDiv" align="center">
+        <div th:replace="fragment :: menuFragment"></div>
+        <br /><br />
+
+        <h2>Contact Page</h2>
+
+        <form action="#" th:action="@{/contact}" th:object="${user}" method="post">
+            <label>Name:</label>
+            <input type="text" th:field="*{name}" />
+            <label>Email:</label>
+            <input type="email" th:field="*{email}" />
+            <label>Note:</label>
+            <input type="text" th:field="*{note}" />
+
+            <button type="submit">Submit</button>
+        </form>
+        <br /><br />
+
+
+        <div align="center">
+            <h3>Feedback preview</h3>
+
+            <div class="userData">
+                <span>Name:</span><span th:text="${user.name}"></span><br/>
+                <span>Eamil:</span><span th:text="${user.email}"></span><br/>
+                <span>Note:</span><span th:text="${user.note}"></span>
+            </div>
+
+        </div>
+
+
+        <br /><br />
+        <div th:replace="fragment :: footerFragment"></div>
+
+    </div>
+
+
+</body>
+</html>

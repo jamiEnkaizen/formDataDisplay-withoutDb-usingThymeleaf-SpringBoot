@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+</head>
+<body>
+
+    <div class="mainDiv" align="center">
+        <div th:replace="fragment :: menuFragment"></div>
+        <br /><br />
+
+        <h2>Home Page</h2>
+        <p>Welcome to the home page.</p>
+
+        <br /><br />
+        <div th:replace="fragment :: footerFragment"></div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Fragment</title>
+</head>
+<body>
+
+  <div th:fragment="menuFragment">
+      <div>
+          <a href="#" th:href="@{/home}">Home</a>
+          <a href="#" th:href="@{/services}">Services</a>
+          <a href="#" th:href="@{/contact}">Contact</a>
+      </div>
+  </div>
+
+
+  <div th:fragment="footerFragment">
+      <div>
+          <p>➖➖This is footer➖➖</p>
+      </div>
+  </div>
+
+</body>
+</html>
